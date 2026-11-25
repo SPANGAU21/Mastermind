@@ -28,3 +28,20 @@ while True:
     except Exception as e:
         print("Ett fel uppstod, försök igen")
 
+if svårhetsnivå == "lätt":
+    kod = 
+
+i=1
+while i <=12:
+    try:
+        gissning = input("Ange gissning som följd av fyra tal mellan 1 och 6, t.ex. 1234:").replace(" ","")
+        if len(gissning) != 4:
+            print("Du måste ange exakt fyra siffror!")
+            continue
+        elif not all(char in '123456' for char in gissning):
+            print("Du måste ange siffror mellan 1 och 6!")
+            continue
+    except Exception as e:
+        print("Ett fel uppstod")
+        continue
+          
