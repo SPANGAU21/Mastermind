@@ -27,11 +27,29 @@ while True:
             print("Svara bara lätt eller svårt!")
     except Exception as e:
         print("Ett fel uppstod, försök igen")
-
+i=0
+x = 0
+svar = []
 if svårhetsnivå == "lätt":
-    kod = 
+    while i <4:
+        r = random.randint(1,6)
+        svar.append(r) 
+        for a in range(i):
+            if svar[i] == svar[a]:
+                svar.pop(i)
+                i -= 1
+                break
+        i+=1
 
-i=1
+elif svårhetsnivå == "svårt":
+    while i < 4:
+        svar.append(random.randint(1,6))                  
+        i+=1
+print(svar)
+                
+
+
+i=0
 while i <=12:
     try:
         gissning = input("Ange gissning som följd av fyra tal mellan 1 och 6, t.ex. 1234:").replace(" ","")
