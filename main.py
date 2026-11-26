@@ -41,7 +41,7 @@ while i <=12:
         elif not all(char in '123456' for char in gissning):
             print("Du måste ange siffror mellan 1 och 6!")
             continue
-    except Exception as e:
+    except ValueError:
         print("Ett fel uppstod")
         continue
           
